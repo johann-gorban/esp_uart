@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include "freertos/FreeRTOS.h"
 
-#define DEFAULT_EVENT_QUEUE_SIZE 5;
+#define DEFAULT_EVENT_QUEUE_SIZE 5
 
 #define ESP_UART_T_SIZE sizeof(esp_uart_t)
 

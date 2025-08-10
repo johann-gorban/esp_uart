@@ -70,7 +70,7 @@ void uart_close(esp_uart_t *uart) {
 
 
 int uart_readline(esp_uart_t *uart, char *buf, size_t max_len, TickType_t timeout) {
-    if (buf == NULL) {
+    if (uart == NULL || buf == NULL) {
         return 0;
     }
 
@@ -107,13 +107,16 @@ int uart_write(esp_uart_t *uart, const char *data) {
 
 
 int uart_writef(esp_uart_t *uart, const char *fmt, ...) {
-    
+    return 0;
 }
 
 
 bool uart_available(esp_uart_t *uart) {
-    bool result = false;
+    if (uart == NULL) {
+        return false;
+    }
 
+    bool result = false;
     size_t size;
 
     esp_err_t err;
