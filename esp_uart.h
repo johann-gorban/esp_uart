@@ -28,5 +28,3 @@ int uart_write(esp_uart_t *uart, const char *data);
 int uart_writef(esp_uart_t *uart, const char *fmt, ...);
 
 bool uart_available(esp_uart_t *uart);
-
-void uart_flush_input(esp_uart_t *uart);
